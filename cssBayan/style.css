@@ -1,0 +1,120 @@
+body{
+    background: url(logo4.jpg) repeat;
+}
+
+h1{
+    font-weight: bold;
+    font-size: 100px;
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+    @keyframes color-change {
+        0% {
+            color: rgb(63, 162, 175);
+          }
+          25% {
+            color: rgb(231, 25, 25);
+          }
+          50% {
+            color: rgb(223, 226, 14);
+          }
+          75% {
+            color: rgb(0, 0, 196);
+          }
+    }
+
+img{
+    filter: blur(2px);
+    transition: 1s;
+    max-width: 100%;
+    padding-top: 20px;
+    border-radius: 25%;
+}
+
+img:hover{
+   filter: blur(0); 
+}
+
+hr{
+    border: none; /* Убираем границу */
+    background-color: rgb(209, 207, 207); /* Цвет линии */
+    height: 2px; /* Толщина линии */
+   }
+
+/* Faq */
+   .faq{
+    max-width: 500px;
+    margin: 20px auto;
+   }
+
+   .faq-item{
+    margin-bottom: 5px;
+
+    border: 1px rgb(46, 27, 25);
+   }
+
+   .faq-title{
+    max-width: 100%;
+    font-weight: bold;
+    font-size: 20px;
+    display: block;
+    cursor: pointer;
+    padding: 12px;
+    position: relative;
+    border-radius: 25px;
+
+    transition: background .4s
+    ease-out;
+   }
+
+   .faq-title:after{
+    content: "";
+    display: block;
+
+    border-style: solid;
+    border-width: 0 0 10px 10px;
+    border-color: transparent transparent #000000 transparent;
+
+    position: absolute;
+    top: 40%;
+    right: 3%;
+
+    transform: translate(-50%);
+   }
+
+   .faq-title:hover{
+    background-color: rgb(209, 207, 207);
+    border-radius: 25px;
+
+    animation: color-change 2s infinite;
+   }
+
+   .faq-input{
+    width: 0;
+    height: 0;
+
+    appearance: none;
+    position: absolute;
+   }
+
+   .faq-input:checked ~ .faq-title{
+     background-color: rgb(209, 207, 207);
+
+     animation: color-change 2s infinite;
+   }
+
+   .faq-input:checked ~ .faq-title:after{
+    border-style: solid;
+    border-width: 10px 10px 0 0;
+    border-color: #000000 transparent transparent transparent;
+   }
+
+   .faq-input:checked ~ .faq-img {
+    display: block;
+   }
+
+   .faq-img{
+    display: none;
+    cursor: pointer;
+   }
